@@ -59,7 +59,7 @@ public class Monopoly {
             String owner = property.getOwner();
             Player propertyOwner = names.get(owner);
             if (!person.payRent(property, propertyOwner)) {
-               // Since the player cannot pay rent they are removed from the list of players
+               // Since the player cannot pay rent they are removed from the list of players and lose the game
                players.remove(person);
             }
          }
