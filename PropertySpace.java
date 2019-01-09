@@ -1,4 +1,4 @@
-// PropertySpace objects extend Space objects, and represent each of the properties along the board
+// PropertySpace objects represent each of the properties along the board
 public class PropertySpace {
    private int position;
    private int price;
