@@ -49,10 +49,18 @@ public class PropertySpace {
    
    // Mortgages this property
    // Players no longer pay rent for landing on this property
-   // The Player who owns this property gains money equal to the mortgage value
+   // The player who owns this property gains money equal to the mortgage value
    public void makeMortgaged(Player propertyOwner) {
       rent = 0;
       propertyOwner.addMoney(mortgage);
+   }
+   
+   // Unmortgages this property
+   // Players pay rent for landing on this property again
+   // The player who owns this property loses 110% of the mortgage value
+   public void unmortgage(Player propertyOwner) {
+      rent = originalRent;
+      propertyOwner.addMoney((int) -1.1 * mortgage);
    }
 }
 
